@@ -988,34 +988,4 @@ if len(st.session_state.history) > 0:
 
     st.subheader("📜 Analysis History")
 
-    for item in st.session_state.history[:10]:
 
-        col1, col2, col3 = st.columns([2, 2, 2])
-
-        with col1:
-            st.write(f"🕒 {item['time']}")
-
-        with col2:
-            st.write(f"✈️ {item['prediction']}x")
-
-        with col3:
-            st.write(f"🎯 {item['confidence']}%")
-
-    st.markdown('</div>', unsafe_allow_html=True)
-
-
-# -------------------------------------------------
-# DISCLAIMER
-# -------------------------------------------------
-
-st.markdown("""
-<div class="warning-box">
-
-⚠️ <b>IMPORTANT:</b> This tool performs statistical
-analysis on manually entered historical results.
-It does not have access to LuckPesa or any other
-betting platform's internal systems, and its output
-cannot guarantee the next multiplier.
-
-</div>
-""", unsafe_allow_html=True)
